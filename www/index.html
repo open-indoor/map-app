@@ -119,6 +119,8 @@
           ('properties' in feature)
           && 'level' in feature.properties
           && (!isNaN(feature.properties.level))
+          && ('openindoor:id' in feature.properties)
+
         ) {
           // console.log('feature.properties.level:', feature.properties.level);
           // console.log('typeof feature.properties.level:', typeof feature.properties.level);
@@ -134,13 +136,13 @@
       // if (hovered.length > 0) {
       //   console.log('hoveredLevels:' + JSON.stringify(hoveredLevels));
       // }
-
       maxLevel = Math.max.apply(Math, hoveredLevels.map(function (feature) {
         // console.log('level:', feature.properties.level)
         return Number(feature.properties.level);
       }))
 
       focusLevel = isFinite(maxLevel) ? maxLevel : null
+      focusPlace = hoveredLevels[0]['openindoor:id']
 
       // console.log("focusLevel:", focusLevel)
       //
@@ -150,6 +152,7 @@
           feature => (
             ('properties' in feature) && ('level' in feature.properties)
             && (Number(feature.properties.level) === focusLevel)
+            && (feature['openindoor:id'] === focusPlace)
           )
         )
       }
