@@ -146,13 +146,15 @@
       // console.log("focusLevel:", focusLevel)
       //
 
-      if (focusLevel !== undefined) {
-        focusPlace = hoveredLevels[0]['openindoor:id']
+      if (focusLevel !== null) {
+	//console.log(hoveredLevels)
+        focusPlace = hoveredLevels[0]['properties']['openindoor:id']
+	//console.log('focusPlace:', focusPlace)
         focus = allFeatures.filter(
           feature => (
             ('properties' in feature) && ('level' in feature.properties)
             && (Number(feature.properties.level) === focusLevel)
-            && (feature['openindoor:id'] === focusPlace)
+            && (feature['properties']['openindoor:id'] === focusPlace)
           )
         )
       }
