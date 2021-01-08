@@ -6,10 +6,10 @@
   <title>OpenIndoor</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <script src="https://unpkg.com/@turf/turf/turf.min.js"></script>
-  <!-- <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" /> -->
-  <script src="${APP_URL}/mapbox-gl-js/dist/mapbox-gl.js"></script>
-  <link href="${APP_URL}/mapbox-gl-js/dist/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+  <!-- <script src="${APP_URL}/mapbox-gl-js/dist/mapbox-gl.js"></script>
+  <link href="${APP_URL}/mapbox-gl-js/dist/mapbox-gl.css" rel="stylesheet" /> -->
   <script src="${APP_URL}/mapbox-gl-openindoor/dist/mapbox-gl-openindoor.umd.min.js"></script>
   <link href="${APP_URL}/mapbox-gl-openindoor/dist/mapbox-gl-openindoor.css" rel="stylesheet" />
   <!-- <script
@@ -36,7 +36,7 @@
     let zoom = 17;
     let bearing = 0;
     let pitch = 0;
-    let maxPitchLow = 65;
+    let maxPitchLow = 60;
     let maxPitchHigh = 80;
     let openIndoor
     const hashParams = new URLSearchParams(
